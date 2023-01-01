@@ -1,0 +1,89 @@
+$sides: (
+  l: 'left',
+  r: 'right',
+  t: 'top',
+  b: 'bottom',
+);
+.m-none {
+  margin: 0;
+}
+@each $initial, $side in $sides {
+  .m#{$initial}-narrow {
+    margin-#{$side}: 10px;
+  }
+
+  .m#{$initial}-wide {
+    margin-#{$side}: 20px;
+  }
+
+  .m#{$initial}-none {
+    margin-#{$side}: 0;
+  }
+
+  .m#{$initial}-xtrawide {
+    margin-#{$side}: 40px;
+  }
+
+  .m#{$initial}-jumbo {
+    margin-#{$side}: 60px;
+  }
+}
+
+.p-none {
+  padding: 0;
+}
+
+@each $initial, $side in $sides {
+  .p#{$initial}-narrow {
+    padding-#{$side}: 10px;
+  }
+
+  .p#{$initial}-wide {
+    padding-#{$side}: 20px;
+  }
+
+  .p#{$initial}-none {
+    padding-#{$side}: 0;
+  }
+
+  .p#{$initial}-xtrawide {
+    padding-#{$side}: 40px;
+  }
+
+  .p#{$initial}-jumbo {
+    padding-#{$side}: 60px;
+  }
+}
+
+.list-none {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  span {
+    vertical-align: middle;
+  }
+}
+.inline-block {
+  display: inline-block;
+}
+
+.flb-d {
+  display: flex;
+}
+
+.flb-a-center {
+  align-items: center;
+}
+.flb-d-column {
+  flex-direction: column;
+}
+
+.d-fl {
+  display: flex;
+}
+.j-content-fl-end {
+  justify-content: flex-end;
+}
+.w-auto {
+  width: auto;
+}
